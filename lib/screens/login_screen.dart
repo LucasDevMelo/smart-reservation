@@ -22,7 +22,7 @@ class _loginScreenState extends State<loginScreen> {
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: Image.asset(
-                      "images/doctors.png",
+                      "images/capa.png",
                     ),
                   ),
                   SizedBox(height: 10),
@@ -103,7 +103,7 @@ class _loginScreenState extends State<loginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Ainda não criou um conta ?",
+                        "Ainda não criou uma conta ?",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

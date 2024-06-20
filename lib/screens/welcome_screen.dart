@@ -28,10 +28,10 @@ class WelcomeScreen extends StatelessWidget {
                           ));
                     },
                     child: Text(
-                      "SKIP",
+                      "Sem login",
                       style: TextStyle(
                         color: Color(0xFF7165D6),
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                   ),

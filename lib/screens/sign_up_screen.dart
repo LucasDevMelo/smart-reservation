@@ -40,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                     child: TextField(
                       decoration: InputDecoration(
-                        labelText: "Seu e-mail",
+                        labelText: "E-mail",
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.email),
                       ),

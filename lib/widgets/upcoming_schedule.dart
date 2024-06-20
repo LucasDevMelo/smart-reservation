@@ -8,10 +8,6 @@ class UpcomingSchedule extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "About Doctor",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-          ),
           SizedBox(height: 15),
           Container(
             padding: EdgeInsets.symmetric(vertical: 5),
@@ -32,15 +28,15 @@ class UpcomingSchedule extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "Dr. Doctor Name",
+                      "Restaurante Coco Bambu",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("Therapist"),
+                    subtitle: Text("Frutos do mar"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
+                      backgroundImage: AssetImage("cocobambulogo.jpg"),
                     ),
                   ),
                   Padding(
@@ -62,7 +58,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "12/01/2023",
+                            "12/07/2024",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -77,7 +73,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "10:30 AM",
+                            "11h:30min",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -95,7 +91,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "Confirmado",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -119,7 +115,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "Cancelar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -140,7 +136,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "Reagendar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -157,11 +153,6 @@ class UpcomingSchedule extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Text(
-            "About Doctor",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-          ),
           SizedBox(height: 15),
           Container(
             padding: EdgeInsets.symmetric(vertical: 5),
@@ -182,15 +173,15 @@ class UpcomingSchedule extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "Dr. Doctor Name",
+                      "Restaurante Mangai",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("Therapist"),
+                    subtitle: Text("Comida nordestina"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor2.jpg"),
+                      backgroundImage: AssetImage("images/mangailogo.jpg"),
                     ),
                   ),
                   Padding(
@@ -212,7 +203,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "12/01/2023",
+                            "28/07/2024",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -227,7 +218,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "10:30 AM",
+                            "12h:30min",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -245,7 +236,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "Confirmado",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -269,7 +260,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "Cancelar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -290,7 +281,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "Reagendar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -307,11 +298,6 @@ class UpcomingSchedule extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Text(
-            "About Doctor",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-          ),
           SizedBox(height: 15),
           Container(
             padding: EdgeInsets.symmetric(vertical: 5),
@@ -332,15 +318,15 @@ class UpcomingSchedule extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "Dr. Doctor Name",
+                      "Restaurante Nau",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("Therapist"),
+                    subtitle: Text("Frutos do mar"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor2.jpg"),
+                      backgroundImage: AssetImage("images/nau.png"),
                     ),
                   ),
                   Padding(
@@ -362,7 +348,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "12/01/2023",
+                            "16/09/2024",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -377,7 +363,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "10:30 AM",
+                            "13h:00min",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -395,7 +381,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "Confirmado",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -419,7 +405,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "Cancelar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -440,7 +426,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "Reagendar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,

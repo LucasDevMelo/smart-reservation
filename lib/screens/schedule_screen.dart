@@ -25,7 +25,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Text(
-              "Schedule",
+              "Minhas reservas",
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w500,
@@ -41,7 +41,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 InkWell(
                   onTap: () {
@@ -58,7 +58,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "Upcoming",
+                      "Em andamento",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
@@ -83,37 +83,12 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "Completed",
+                      "Finalizadas",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color:
                             _buttonIndex == 1 ? Colors.white : Colors.black38,
-                      ),
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      _buttonIndex = 2;
-                    });
-                  },
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-                    decoration: BoxDecoration(
-                      color: _buttonIndex == 2
-                          ? Color(0xFF7165D6)
-                          : Colors.transparent,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      "Completed",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color:
-                            _buttonIndex == 2 ? Colors.white : Colors.black38,
                       ),
                     ),
                   ),
