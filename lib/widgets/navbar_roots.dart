@@ -14,7 +14,6 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     HomeScreen(),
-    MessagesScreen(),
     ScheduleScreen(),
     SettingScreen(),
   ];
@@ -43,16 +42,11 @@ class _NavBarRootsState extends State<NavBarRoots> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: "Home"),
+                icon: Icon(Icons.home_filled), label: "Início"),
             BottomNavigationBarItem(
-                icon: Icon(
-                  CupertinoIcons.chat_bubble_text_fill,
-                ),
-                label: "Messages"),
+                icon: Icon(Icons.calendar_month_outlined), label: "Reservas"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_month_outlined), label: "Schedule"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings"),
+                icon: Icon(Icons.settings), label: "Configurações"),
           ],
         ),
       ),

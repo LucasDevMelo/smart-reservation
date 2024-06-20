@@ -1,22 +1,56 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcare/screens/appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  List symptoms = [
-    "Temperature",
-    "Snuffle",
-    "Fever",
-    "Cough",
-    "Cold",
+  List foods = [
+    "Sushi",
+    "Massas",
+    "Churrasco",
+    "Pizza",
+    "Hambúrguer",
+    "Vegetariano",
+  ];
+
+  List restaurantsNames = [
+    "Coco Bambu",
+    "Mangai",
+    "NAU Frutos do Mar",
+    "Villa Tevere",
+    "Toro Parrilla",
+    "Feitiço das Artes",
+    "Taypá",
+    "Vasto",
+    "Universal",
+    "Saveur Bistrot",
+  ];
+
+  List categoryRestaurant = [
+    "Frutos do mar",
+    "Comida nordestina",
+    "Frutos do mar",
+    "Gastronomia italiana",
+    "Churrasco",
+    "Comida mineira",
+    "Comida Peruana",
+    "Comida brasileira",
+    "Comida brasileira",
+    "Comida brasileira",
   ];
 
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
+    "cocobambulogo.jpg",
+    "mangailogo.jpg",
+    "naulogo.png",
+    "vilalogo.png",
+    "torologo.png",
+    "feiticologo.png",
+    "taypalogo.png",
+    "vastologo.jpg",
+    "universallogo.png",
+    "saveurlogo.png",
   ];
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +60,13 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Hello Alex",
+                      "Olá",
                       style: TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.w500,
@@ -40,122 +74,16 @@ class HomeScreen extends StatelessWidget {
                     ),
                     CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
+                      backgroundImage: AssetImage("images/avatar.png"),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFF7165D6),
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 6,
-                            spreadRadius: 4,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: Color(0xFF7165D6),
-                              size: 35,
-                            ),
-                          ),
-                          SizedBox(height: 30),
-                          Text(
-                            "Clinic Visit",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            "Make an appointment",
-                            style: TextStyle(
-                              color: Colors.white54,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 6,
-                            spreadRadius: 4,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFF0EEFA),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.home_filled,
-                              color: Color(0xFF7165D6),
-                              size: 35,
-                            ),
-                          ),
-                          SizedBox(height: 30),
-                          Text(
-                            "Home Visit",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            "Call the doctor home",
-                            style: TextStyle(
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 25),
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
+              const SizedBox(height: 25),
+              const Padding(
+                padding: EdgeInsets.only(left: 15),
                 child: Text(
-                  "What are your symptoms?",
+                  "O que sua fome pede hoje?",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,
@@ -168,16 +96,16 @@ class HomeScreen extends StatelessWidget {
                 child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: symptoms.length,
+                  itemCount: foods.length,
                   itemBuilder: (context, index) {
                     return Container(
                       margin:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                      padding: EdgeInsets.symmetric(horizontal: 25),
+                          const EdgeInsets.symmetric(horizontal: 7, vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
                       decoration: BoxDecoration(
-                        color: Color(0xFFF4F6FA),
+                        color: const Color(0xFFF4F6FA),
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
                             blurRadius: 4,
@@ -187,8 +115,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          symptoms[index],
-                          style: TextStyle(
+                          foods[index],
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: Colors.black54,
@@ -199,11 +127,11 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
+              const SizedBox(height: 15),
+              const Padding(
+                padding: EdgeInsets.only(left: 15),
                 child: Text(
-                  "Popular Doctors",
+                  "Restaurantes populares",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,
@@ -212,12 +140,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                 ),
-                itemCount: 4,
+                itemCount: 10,
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
@@ -228,12 +156,12 @@ class HomeScreen extends StatelessWidget {
                           ));
                     },
                     child: Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.symmetric(vertical: 15),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.symmetric(vertical: 15),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
                             blurRadius: 4,
@@ -249,21 +177,21 @@ class HomeScreen extends StatelessWidget {
                             backgroundImage:
                                 AssetImage("images/${imgs[index]}"),
                           ),
-                          const Text(
-                            "Dr. Doctor Name",
-                            style: TextStyle(
+                          Text(
+                            restaurantsNames[index],
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
                               color: Colors.black54,
                             ),
                           ),
                           Text(
-                            "Therapist",
-                            style: TextStyle(
+                            categoryRestaurant[index],
+                            style: const TextStyle(
                               color: Colors.black45,
                             ),
                           ),
-                          Row(
+                          const Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
