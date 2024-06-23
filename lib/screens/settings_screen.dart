@@ -66,7 +66,7 @@ class SettingScreen extends StatelessWidget {
               ),
               child: Icon(
                 Icons.notifications_none_outlined,
-                color: Colors.deepPurple,
+                color: Color(0xFFFFB300),
                 size: 35,
               ),
             ),

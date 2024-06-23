@@ -75,7 +75,7 @@ class _loginScreenState extends State<loginScreen> {
                         padding: EdgeInsets.symmetric(vertical: 15),
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Color(0xFF7165D6),
+                          color: Color(0xFFFFB300),
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
@@ -123,7 +123,7 @@ class _loginScreenState extends State<loginScreen> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFFFFB300),
                           ),
                         ),
                       ),

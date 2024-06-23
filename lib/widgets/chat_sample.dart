@@ -33,7 +33,7 @@ class ChatSample extends StatelessWidget {
                 padding:
                     EdgeInsets.only(left: 20, top: 10, bottom: 25, right: 20),
                 decoration: BoxDecoration(
-                  color: Color(0xFF7165D6),
+                  color: Color(0xFFFFB300),
                 ),
                 child: Text(
                   "Hello Doctor, Are you there?",

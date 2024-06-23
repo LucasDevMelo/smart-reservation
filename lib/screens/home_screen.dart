@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                           const EdgeInsets.symmetric(horizontal: 7, vertical: 10),
                       padding: const EdgeInsets.symmetric(horizontal: 25),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFF4F6FA),
+                        color: const Color(0xFFFFB300),
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
-                            color: Colors.black54,
+                            color: Colors.white,
                           ),
                         ),
                       ),

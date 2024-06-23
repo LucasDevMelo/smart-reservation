@@ -131,7 +131,7 @@ class UpcomingSchedule extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFFFFB300),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
@@ -276,7 +276,7 @@ class UpcomingSchedule extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color:Color(0xFFFFB300),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
@@ -421,7 +421,7 @@ class UpcomingSchedule extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFFFFB300),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(

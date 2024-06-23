@@ -28,7 +28,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color(0xFF7165D6),
+          selectedItemColor: Color(0xFFFFB300),
           unselectedItemColor: Colors.black26,
           selectedLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,

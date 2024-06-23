@@ -28,9 +28,9 @@ class WelcomeScreen extends StatelessWidget {
                           ));
                     },
                     child: Text(
-                      "Sem login",
+                      "Pular",
                       style: TextStyle(
-                        color: Color(0xFF7165D6),
+                        color: Color(0xFFFFB300),
                         fontSize: 15,
                       ),
                     ),
@@ -47,7 +47,7 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   "Bem-vindo ao melhor aplicativo de reservas!",
                   style: TextStyle(
-                    color: Color(0xFF7165D6),
+                    color: Color(0xFFFFB300),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
@@ -68,7 +68,7 @@ class WelcomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Material(
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFFFFB300),
                       borderRadius: BorderRadius.circular(10),
                       child: InkWell(
                         onTap: () {
@@ -93,7 +93,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     Material(
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFFFFB300),
                       borderRadius: BorderRadius.circular(10),
                       child: InkWell(
                         onTap: () {

@@ -12,7 +12,7 @@ class AppointmentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF7165D6),
+      backgroundColor: Color(0xFFFFB300),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -74,7 +74,7 @@ class AppointmentScreen extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xFF9F97E2),
+                                color: Color(0xFFFFB300),
                                 shape: BoxShape.circle,
                               ),
                               child: Icon(
@@ -87,7 +87,7 @@ class AppointmentScreen extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xFF9F97E2),
+                                color: Color(0xFFFFB300),
                                 shape: BoxShape.circle,
                               ),
                               child: Icon(
@@ -160,7 +160,7 @@ class AppointmentScreen extends StatelessWidget {
                         child: Text(
                           "See all",
                           style: TextStyle(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFFFFB300),
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
@@ -260,7 +260,7 @@ class AppointmentScreen extends StatelessWidget {
                       ),
                       child: Icon(
                         Icons.location_on,
-                        color: Color(0xFF7165D6),
+                        color: Color(0xFFFFB300),
                         size: 30,
                       ),
                     ),
@@ -319,12 +319,12 @@ class AppointmentScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(vertical: 18),
                 decoration: BoxDecoration(
-                  color: Color(0xFF7165D6),
+                  color: Color(0xFFFFB300),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
                   child: Text(
-                    "Book Appointment",
+                    "Realizar reserva",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
