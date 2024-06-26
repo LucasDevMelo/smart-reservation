@@ -4,7 +4,7 @@ import 'restaurants.dart';
 
 class AllRestaurants extends ChangeNotifier{
 
-  //cardápio
+  //restaurantes da cidade
   final List<Restaurant> _restaurantsData = [
     //Coco bambu
     Restaurant(
@@ -14,7 +14,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Frutos do mar",
       description: "Com especialidade em frutos do mar, possui um variado cardápio de dar água na boca. Sempre com produtos frescos, da mais alta qualidade, o Coco Bambu do Brasília Shopping é parada obrigatória para quem não abre mão de comer bem.",
       location: "Brasília shopping",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Mangai
@@ -25,7 +61,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Comida nordestina",
       description: "A rede paraibana de restaurantes Mangai apresenta o melhor da cozinha típica nordestina brasileira. Na clássica unidade de Brasília, com vista panorâmica para o Lago Paranoá e a Ponte JK, você pode esperar um cardápio variado e delicioso.",
       location: "SCE Sul, s/n - Lote 2, Asa Sul",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Nau
@@ -36,7 +108,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Frutos do mar",
       description: "Pratos frescos e saborosos, que juntam ingredientes tradicionais brasileiros, fazem a rede ser referência na gastronomia de Brasília. Os salões aconchegantes e sofisticados têm vista para o Lago Paranoá e a Ponte JK.",
       location: "Setor de Clubes Esportivos Sul",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Villa Tevere
@@ -47,18 +155,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Gastronomia italiana",
       description: "Um dos mais tradicionais restaurantes da capital federal, o Villa Tevere é referência em gastronomia italiana. A casa é dividida em 4 ambientes charmosos e aconchegantes. O cardápio também apresenta pratos com toques asiáticos e temperos brasileiros.",
       location: "Asa Sul Comércio Local Sul 115 Bloco A",
-      coments: "comida top",
-    ),
-
-    //Toro Parrilla
-    Restaurant(
-      name: "Toro Parrilla",
-      imagePath: "vilalogo.png",
-      rating: "4.9",
-      category: "Churrasco",
-      description: "Para pessoas apaixonadas por um bom churrasco, a dica é o Toro Parrilla, referência em carnes em Brasília. Excelente restaurante argentino, a casa oferece releituras modernas para pratos tradicionais, sendo especializada em cortes como bife ancho, picanha e costela bovina.",
-      location: "Toro, SHCS CLS 104 BL C Loja 29",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Toro Parrilla
@@ -69,7 +202,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Churrasco",
       description: "Para pessoas apaixonadas por um bom churrasco, a dica é o Toro Parrilla, referência em carnes em Brasília. Excelente restaurante argentino, a casa oferece releituras modernas para pratos tradicionais, sendo especializada em cortes como bife ancho, picanha e costela bovina.",
       location: "SHCS CLS 104 BL C Loja 29",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Feitiço das Artes
@@ -80,7 +249,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Comida mineira",
       description: "O bar e restaurante Feitiço das Artes é um reduto super tradicional da capital federal. Para fãs de arte, cultura, drinques, gastronomia e muita música, o espaço é ideal para curtir momentos animados.",
       location: "CLN 306 Bl. B, Lj. 45",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Taypá
@@ -91,21 +296,94 @@ class AllRestaurants extends ChangeNotifier{
       category: "Comida Peruana",
       description: "Os sabores e aromas irresistíveis da culinária peruana ganham novas interpretações no moderno cardápio da casa. Divididos em área interna e varanda, os ambientes são aconchegantes e, é claro, ganham decoração temática, com objetos decorativos vindos do país vizinho.",
       location: "St. de Habitações Individuais Sul QI 17 BI.G, Lj.208",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Vasto
     Restaurant(
-      name: "Vasto",
-      imagePath: "vastologo.jpg",
-      rating: "4.8",
-      category: "Comida brasileira",
-      description: "A arquitetura, inspirada em restaurantes tradicionais nova-iorquinos, traz um ambiente com atmosfera aconchegante.",
-      location: "Brasilia shopping",
-      coments: "comida top",
-    ),
+    name: "Vasto",
+    imagePath: "vastologo.jpg",
+    rating: "4.8",
+    category: "Comida brasileira",
+    description: "A arquitetura, inspirada em restaurantes tradicionais nova-iorquinos, traz um ambiente com atmosfera aconchegante.",
+    location: "Brasilia shopping",
+    coments: [
+      Comment(
+        title: "Incrível experiência",
+        userImage: "",
+        rating: "4.9",
+        datetime: "25/06/2024",
+        comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+      ),
+      Comment(
+        title: "Ambiente sofisticado",
+        userImage: "",
+        rating: "4.7",
+        datetime: "24/06/2024",
+        comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+      ),
+      Comment(
+        title: "Comida fantástica",
+        userImage: "",
+        rating: "4.8",
+        datetime: "23/06/2024",
+        comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+      ),
+      Comment(
+        title: "Ótimo serviço",
+        userImage: "",
+        rating: "4.9",
+        datetime: "22/06/2024",
+        comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+      ),
+      Comment(
+        title: "Vale a pena a visita",
+        userImage: "",
+        rating: "4.8",
+        datetime: "21/06/2024",
+        comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+      ),
+    ],
+  ),
 
-    //Universal
+
+  //Universal
     Restaurant(
       name: "Universal",
       imagePath: "universallogo.png",
@@ -113,7 +391,43 @@ class AllRestaurants extends ChangeNotifier{
       category: "Comida brasileira",
       description: "O Restaurante Universal é uma atração à parte em Brasília. A casa gastronômica mais viva e diversificada da cidade foi fundada pela consagrada chef Mara Alcamim e é destino certo para quem deseja provar um menu supermoderno. Além disso, a decoração é muito divertida, inusitada e colorida, com inspiração nos clássicos pubs britânicos e em elementos de décadas passadas.",
       location: "Asa Sul Comércio Local Sul 210",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
     ),
 
     //Saveur Bistrot
@@ -124,7 +438,82 @@ class AllRestaurants extends ChangeNotifier{
       category: "Comida brasileira",
       description: "O endereço da alta gastronomia em Brasília é o Saveur Bistrot. Composto de pratos autorais, o menu é assinado pelo chef Thiago Paraíso, que reinterpreta clássicos da cozinha brasileira com muita sofisticação. Destacado por uma cozinha de respeito ao produto e especializado em menu degustação, o lugar foi premiado 2 vezes como Melhor Bistrô de Brasília pela revista Encontro Gastrô, do Correio Braziliense.",
       location: "St. de Mansões Dom Bosco Conj. 10",
-      coments: "comida top",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
+    ),
+  ];
+
+  final List<Comment> _comentariosRestaurantes = [
+    //Coco bambu
+    Comment(
+      title: "Comida deliciosa",
+      userImage: "",
+      rating: "4.7",
+      datetime: "26/06/2024",
+      comment:"Fomos muito bem atendidos, o ambiente é aconchegante e a comida deliciosa",
+    ),
+    Comment(
+      title: "Comida deliciosa",
+      userImage: "",
+      rating: "4.8",
+      datetime: "26/06/2024",
+      comment:"Fomos muito bem atendidos, o ambiente é aconchegante e a comida deliciosa",
+    ),
+    Comment(
+      title: "Comida deliciosa",
+      userImage: "",
+      rating: "4.8",
+      datetime: "26/06/2024",
+      comment:"Fomos muito bem atendidos, o ambiente é aconchegante e a comida deliciosa",
+    ),
+    Comment(
+      title: "Comida deliciosa",
+      userImage: "",
+      rating: "4.8",
+      datetime: "26/06/2024",
+      comment:"Fomos muito bem atendidos, o ambiente é aconchegante e a comida deliciosa",
+    ),
+    Comment(
+      title: "Comida deliciosa",
+      userImage: "",
+      rating: "4.8",
+      datetime: "26/06/2024",
+      comment:"Fomos muito bem atendidos, o ambiente é aconchegante e a comida deliciosa",
     ),
   ];
 

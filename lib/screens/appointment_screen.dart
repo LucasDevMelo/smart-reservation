@@ -54,12 +54,13 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         CircleAvatar(
-                          radius: 35,
-                          backgroundImage: AssetImage("images/doctor1.jpg"),
+                          minRadius: 50,
+                          maxRadius: 50,
+                          backgroundImage: AssetImage("images/${widget.restaurant.imagePath}",),
                         ),
-                        SizedBox(height: 15),
+                        SizedBox(height: 5),
                         Text(
-                          "Dr. Doctor Name",
+                          widget.restaurant.name,
                           style: TextStyle(
                             fontSize: 23,
                             fontWeight: FontWeight.w500,
@@ -68,13 +69,12 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "Therapist",
+                          widget.restaurant.category,
                           style: TextStyle(
                             color: Colors.white60,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 15),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -111,9 +111,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
             Container(
-              height: MediaQuery.of(context).size.height / 1.5,
               width: double.infinity,
               padding: EdgeInsets.only(
                 top: 20,
@@ -128,29 +126,28 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    "About Doctor",
+                    widget.restaurant.description,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    style: TextStyle(fontSize: 16, color: Colors.black54),
-                  ),
+                  // SizedBox(height: 5),
+                  // Text(
+                  //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                  //   style: TextStyle(fontSize: 16, color: Colors.black54),
+                  // ),
                   SizedBox(height: 10),
                   Row(
                     children: [
                       Text(
-                        "Reviews",
+                        "Avaliações",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 10),
                       Icon(Icons.star, color: Colors.amber),
                       Text(
-                        "4.9",
+                        widget.restaurant.rating,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
@@ -158,14 +155,14 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       ),
                       SizedBox(width: 5),
                       Text(
-                        "(124)",
+                        "(5)",
                         style: TextStyle(color: Colors.black54),
                       ),
                       Spacer(),
                       TextButton(
                         onPressed: () {},
                         child: Text(
-                          "See all",
+                          "Ver todas",
                           style: TextStyle(
                             color: Color(0xFFFFB300),
                             fontWeight: FontWeight.w500,
@@ -177,11 +174,11 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                   ),
                   SizedBox(
                     height: 160,
-                    // width: 200,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: 4,
+                      itemCount: widget.restaurant.coments.length,
                       itemBuilder: (context, index) {
+                        var comment = widget.restaurant.coments[index];
                         return Container(
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.symmetric(vertical: 5),
@@ -196,63 +193,60 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               ),
                             ],
                           ),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width / 1.4,
-                            child: Column(
-                              children: [
-                                ListTile(
-                                  leading: CircleAvatar(
-                                    radius: 25,
-                                    backgroundImage:
-                                        AssetImage("images/avatar.png"),
-                                  ),
-                                  title: Text(
-                                    "Dr. Doctor Name",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  subtitle: Text("1 day ago"),
-                                  trailing: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.amber,
-                                      ),
-                                      Text(
-                                        "4.9",
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ],
+                          width: MediaQuery.of(context).size.width / 1.4,
+                          child: Column(
+                            children: [
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 25,
+                                  backgroundImage: AssetImage(comment.userImage),
+                                ),
+                                title: Text(
+                                  comment.title,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(height: 5),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10),
-                                  child: Text(
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    "Many thanks to Dr. Dear. He is a great and a professional doctor.",
-                                    style: TextStyle(
-                                      color: Colors.black,
+                                subtitle: Text(comment.datetime),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.amber,
                                     ),
+                                    Text(
+                                      comment.rating,
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Text(
+                                  comment.comment,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.black,
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         );
                       },
                     ),
                   ),
+
                   SizedBox(height: 10),
                   Text(
-                    "Location",
+                    "Localização",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -272,12 +266,12 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       ),
                     ),
                     title: Text(
-                      "New York, Medical Center",
+                      widget.restaurant.location,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("address line of the medical center"),
+                    subtitle: Text("Brasília-DF"),
                   ),
                 ],
               ),
@@ -300,25 +294,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
         ),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Consultation price",
-                  style: TextStyle(
-                    color: Colors.black54,
-                  ),
-                ),
-                Text(
-                  "\$100",
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
             SizedBox(height: 15),
             InkWell(
               onTap: () {},
