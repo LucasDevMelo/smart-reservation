@@ -202,7 +202,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                 leading: CircleAvatar(
                                   radius: 25,
                                   backgroundImage: AssetImage(comment.userImage),
-                                  backgroundColor: Color.fromARGB(255, 238, 190, 80),
+                                  backgroundColor: Color.fromARGB(255, 250, 211, 120),
                                 ),
                                 title: Text(
                                   comment.title,
@@ -297,6 +297,16 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
         ),
         child: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Faça uma reserva agora mesmo",
+                  style: TextStyle(color: Colors.black54),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
             SizedBox(height: 15),
             InkWell(
               onTap: () {},

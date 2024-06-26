@@ -61,8 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final restaurantsData = allrestaurants.restaurantsData;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Restaurantes'),
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -87,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         CircleAvatar(
                           radius: 25,
                           backgroundImage: AssetImage("images/avatar.png"),
-                          backgroundColor: Color.fromARGB(255, 238, 190, 80),
+                          backgroundColor: Color.fromARGB(255, 250, 211, 120),
                         ),
                       ],
                     ),

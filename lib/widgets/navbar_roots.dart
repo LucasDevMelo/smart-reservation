@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcare/screens/home_screen.dart';
-import 'package:healthcare/screens/messages_screen.dart';
 import 'package:healthcare/screens/schedule_screen.dart';
 import 'package:healthcare/screens/settings_screen.dart';
 
