@@ -22,7 +22,11 @@ class WelcomeScreen extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/homescreen');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NavBarRoots(),
+                          ));
                     },
                     child: Text(
                       "Pular",
