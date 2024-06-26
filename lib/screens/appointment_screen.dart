@@ -116,6 +116,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
               padding: EdgeInsets.only(
                 top: 20,
                 left: 15,
+                right: 15,
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -128,8 +129,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget.restaurant.description,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  widget.restaurant.description,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.justify,
                   ),
                   // SizedBox(height: 5),
                   // Text(
@@ -200,6 +202,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                 leading: CircleAvatar(
                                   radius: 25,
                                   backgroundImage: AssetImage(comment.userImage),
+                                  backgroundColor: Color.fromARGB(255, 238, 190, 80),
                                 ),
                                 title: Text(
                                   comment.title,
