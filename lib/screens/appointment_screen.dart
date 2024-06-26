@@ -1,13 +1,20 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:healthcare/models/restaurants.dart';
+import 'package:healthcare/models/all_restaurants.dart';
 
-class AppointmentScreen extends StatelessWidget {
-  List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
-  ];
+class AppointmentScreen extends StatefulWidget {
+  final Restaurant restaurant;
+
+  const AppointmentScreen({super.key, required this.restaurant});
+
+  @override
+  State<AppointmentScreen> createState() => _AppointmentScreenState();
+}
+
+
+class _AppointmentScreenState extends State<AppointmentScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -197,7 +204,7 @@ class AppointmentScreen extends StatelessWidget {
                                   leading: CircleAvatar(
                                     radius: 25,
                                     backgroundImage:
-                                        AssetImage("images/${imgs[index]}"),
+                                        AssetImage("images/avatar.png"),
                                   ),
                                   title: Text(
                                     "Dr. Doctor Name",

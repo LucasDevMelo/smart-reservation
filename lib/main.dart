@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:healthcare/models/all_restaurants.dart';
+import 'package:healthcare/screens/home_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:healthcare/screens/welcome_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      ChangeNotifierProvider(
+        create: (context) => AllRestaurants(),
+        child: const MyApp(),
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +21,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home:  WelcomeScreen(),
+      routes: {
+        '/welcomescreen': (context) =>  WelcomeScreen(),
+        '/homescreen': (context) =>  const HomeScreen(),
+      },
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare/screens/home_screen.dart';
 import 'package:healthcare/screens/login_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:healthcare/screens/sign_up_screen.dart';
 import 'package:healthcare/widgets/navbar_roots.dart';
 
@@ -21,11 +22,7 @@ class WelcomeScreen extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => NavBarRoots(),
-                          ));
+                      Navigator.pushNamed(context, '/homescreen');
                     },
                     child: Text(
                       "Pular",

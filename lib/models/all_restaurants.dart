@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:healthcare/models/restaurants.dart';
 import 'restaurants.dart';
 
-class RestaurantsBrasilia extends ChangeNotifier{
+class AllRestaurants extends ChangeNotifier{
 
   //cardápio
-  final List<Restaurant> _restaurantMenu = [
+  final List<Restaurant> _restaurantsData = [
     //Coco bambu
     Restaurant(
       name: "Coco Bambu",
@@ -128,6 +128,7 @@ class RestaurantsBrasilia extends ChangeNotifier{
     ),
   ];
 
+  List<Restaurant> get restaurantsData => _restaurantsData;
 //   //coments
 //   List<Food> _cart = [];
 
