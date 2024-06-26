@@ -19,6 +19,7 @@ class SettingScreen extends StatelessWidget {
           SizedBox(height: 30),
           ListTile(
             leading: CircleAvatar(
+              backgroundColor: Colors.amber,
               radius: 30,
               backgroundImage: AssetImage("images/doctor1.jpg"),
             ),
@@ -37,12 +38,12 @@ class SettingScreen extends StatelessWidget {
             leading: Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.blue.shade100,
+                color: Colors.amber,
                 shape: BoxShape.circle,
               ),
               child: Icon(
                 CupertinoIcons.person,
-                color: Colors.blue,
+                color: Colors.black,
                 size: 35,
               ),
             ),
@@ -61,12 +62,12 @@ class SettingScreen extends StatelessWidget {
             leading: Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.deepPurple.shade100,
+                color: Colors.amber,
                 shape: BoxShape.circle,
               ),
               child: Icon(
                 Icons.notifications_none_outlined,
-                color: Color(0xFFFFB300),
+                color: Colors.black,
                 size: 35,
               ),
             ),
@@ -85,7 +86,7 @@ class SettingScreen extends StatelessWidget {
             leading: Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.redAccent.shade100,
+                color: Colors.amber,
                 shape: BoxShape.circle,
               ),
               child: Icon(

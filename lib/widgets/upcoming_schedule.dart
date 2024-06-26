@@ -136,7 +136,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reagendar",
+                              "Alterar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -281,7 +281,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reagendar",
+                              "Alterar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -426,7 +426,7 @@ class UpcomingSchedule extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reagendar",
+                              "Alterar",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
