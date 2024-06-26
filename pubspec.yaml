@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   custom_clippers: ^2.0.0
   provider: ^5.0.0
+  table_calendar: ^3.0.9
+  flutter_datetime_picker: ^1.5.1
 
 
 dev_dependencies:
