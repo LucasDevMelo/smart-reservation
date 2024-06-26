@@ -276,6 +276,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     ),
                     subtitle: Text("Brasília-DF"),
                   ),
+                  SizedBox(height: 150), 
                 ],
               ),
             ),
