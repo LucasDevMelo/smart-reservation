@@ -47,6 +47,7 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(height: 50),
                 Text(
                   "Bem-vindo ao melhor aplicativo de reservas!",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     color: Color(0xFFFFB300),
                     fontSize: 25,
@@ -58,6 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(height: 10),
                 Text(
                   "Prepare-se para viver experiências gastronômicas incríveis nos melhores restaurantes. Escolha um restaurante, faça a reserva e desfrute o melhor da gastronomia.",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 18,
