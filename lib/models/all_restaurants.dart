@@ -102,7 +102,7 @@ class AllRestaurants extends ChangeNotifier{
 
     //Nau
     Restaurant(
-      name: "NAU Frutos do Mar",
+      name: "NAU",
       imagePath: "naulogo.png",
       rating: "4.4",
       category: "Frutos do mar",

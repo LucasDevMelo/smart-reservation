@@ -9,20 +9,35 @@ class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
+
 class _HomeScreenState extends State<HomeScreen> {
-  // Navegar para a tela do restaurante
-  void navigateToRestaurantDetails(int index) {
+  void navigateToRestaurantDetails(int index, bool isPopular) {
     final allrestaurants = context.read<AllRestaurants>();
     final restaurantsData = allrestaurants.restaurantsData;
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => AppointmentScreen(
-          restaurant: restaurantsData[index],
+    final popularRestaurants = restaurantsData.take(5).toList();
+
+    if (isPopular && index < popularRestaurants.length) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => AppointmentScreen(
+            restaurant: popularRestaurants[index],
+          ),
         ),
-      ),
-    );
+      );
+    } else if (!isPopular && index < restaurantsData.length) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => AppointmentScreen(
+            restaurant: restaurantsData[index],
+          ),
+        ),
+      );
+    }
   }
+
+
   List foods = [
     "Sushi",
     "Massas",
@@ -31,10 +46,12 @@ class _HomeScreenState extends State<HomeScreen> {
     "Hambúrguer",
     "Vegetariano",
   ];
+
   @override
   Widget build(BuildContext context) {
     final allrestaurants = context.read<AllRestaurants>();
     final restaurantsData = allrestaurants.restaurantsData;
+    final popularRestaurants = restaurantsData.take(5).toList();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -106,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
-                      "Restaurantes populares",
+                      "Restaurantes mais populares",
                       style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w500,
@@ -114,64 +131,126 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.75, // Ajustar a proporção para caber melhor na tela
-                    ),
-                    itemCount: restaurantsData.length,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () => navigateToRestaurantDetails(index),
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          padding: const EdgeInsets.symmetric(vertical: 15),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 4,
-                                spreadRadius: 2,
-                              ),
-                            ],
+                  const SizedBox(height: 15),
+                  SizedBox(
+                    height: 200,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: popularRestaurants.length,
+                      itemBuilder: (context, index) {
+                        if (index >= popularRestaurants.length) return Container();
+                        return InkWell(
+                          onTap: () => navigateToRestaurantDetails(index, true),
+                          child: Container(
+                            width: 150,
+                            margin: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 4,
+                                  spreadRadius: 2,
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                CircleAvatar(
+                                  radius: 35,
+                                  backgroundImage: AssetImage("images/${popularRestaurants[index].imagePath}"),
+                                ),
+                                Text(
+                                  popularRestaurants[index].name,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                                Text(
+                                  popularRestaurants[index].category,
+                                  style: const TextStyle(
+                                    color: Colors.black45,
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
+                                      Icons.star,
+                                      color: Colors.amber,
+                                    ),
+                                    Text(
+                                      "${popularRestaurants[index].rating}",
+                                      style: const TextStyle(
+                                        color: Colors.black45,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        );
+                      },
+                    ),
+                  ),
+
+                  const SizedBox(height: 15),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text(
+                      "Todos restaurantes",
+                      style: TextStyle(
+                        fontSize: 23,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ),
+                  ListView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: restaurantsData.length,
+                    itemBuilder: (context, index) {
+                      int reverseIndex = restaurantsData.length - 1 - index;
+                      if (index >= restaurantsData.length) return Container();
+                      return GestureDetector(
+                        onTap: () => navigateToRestaurantDetails(reverseIndex, false),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                          padding: const EdgeInsets.all(10),
+                          child: Row(
                             children: [
                               CircleAvatar(
                                 radius: 35,
-                                backgroundImage: AssetImage("images/${restaurantsData[index].imagePath}"),
+                                backgroundImage: AssetImage("images/${restaurantsData[reverseIndex].imagePath}"),
                               ),
-                              Text(
-                                restaurantsData[index].name,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black54,
-                                ),
-                              ),
-                              Text(
-                                restaurantsData[index].category,
-                                style: const TextStyle(
-                                  color: Colors.black45,
-                                ),
-                              ),
-                              const Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
+
+                              const SizedBox(width: 20),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
                                   Text(
-                                    "4.9",
-                                    style: TextStyle(
-                                      color: Colors.black45,
+                                    restaurantsData[reverseIndex].name,
+                                  ),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    constraints: BoxConstraints(
+                                      maxWidth: MediaQuery.of(context).size.width - 190,
+                                    ),
+                                    child: Text(
+                                      restaurantsData[reverseIndex].location,
+                                      style: TextStyle(color: Colors.grey[700]),
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ],
@@ -182,6 +261,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     },
                   ),
+
                 ],
               ),
             ),
