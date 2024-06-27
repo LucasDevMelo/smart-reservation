@@ -33,6 +33,12 @@ class _loginScreenState extends State<loginScreen> {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         label: Text("\Nome de usuário"),
                         prefixIcon: Icon(Icons.person),
                       ),
@@ -44,6 +50,12 @@ class _loginScreenState extends State<loginScreen> {
                       obscureText: passToggle ? true : false,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         label: Text("Senha"),
                         prefixIcon: Icon(Icons.lock),
                         suffixIcon: InkWell(

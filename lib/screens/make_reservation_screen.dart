@@ -80,17 +80,37 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Reserva Confirmada'),
-            content: Text('Data: $reservationDate\nHora: $reservationTime'),
+            backgroundColor: Colors.white,
+            title: Text(
+              'Reserva Confirmada',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25.0,
+              ),
+            ),
+            content: Text(
+              'Data: $reservationDate\nHora: $reservationTime',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+              ),
+            ),
             actions: <Widget>[
               TextButton(
-                child: Text('OK'),
+                child: Text(
+                  'OK',
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 20.0,
+                  ),
+                ),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
             ],
           );
+
         },
       );
     }

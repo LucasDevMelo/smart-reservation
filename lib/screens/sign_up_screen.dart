@@ -33,6 +33,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       decoration: InputDecoration(
                         labelText: "Nome completo",
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         prefixIcon: Icon(Icons.person),
                       ),
                     ),
@@ -43,6 +49,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       decoration: InputDecoration(
                         labelText: "E-mail",
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         prefixIcon: Icon(Icons.email),
                       ),
                     ),
@@ -53,6 +65,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       decoration: InputDecoration(
                         labelText: "Telefone",
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         prefixIcon: Icon(Icons.phone),
                       ),
                     ),
@@ -63,6 +81,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       obscureText: passToggle ? true : false,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.orangeAccent,
+                        ),
                         label: Text("Senha"),
                         prefixIcon: Icon(Icons.lock),
                         suffixIcon: InkWell(
