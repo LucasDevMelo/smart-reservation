@@ -49,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(height: 50),
                 Text(
                   "Bem-vindo ao melhor aplicativo de reservas!",
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFFFFB300),
                     fontSize: 25,
