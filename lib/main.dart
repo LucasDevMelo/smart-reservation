@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       home:  WelcomeScreen(),
       routes: {
         '/welcomescreen': (context) =>  WelcomeScreen(),
-        '/homescreen': (context) =>  const HomeScreen(fromLogin: true,),
+        '/homescreen': (context) =>  const HomeScreen(),
       },
     );
   }

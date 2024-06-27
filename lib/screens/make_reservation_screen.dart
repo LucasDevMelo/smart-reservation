@@ -146,6 +146,7 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                       children: <Widget>[
                         Column(
                           children: [
+                            SizedBox(height: 45),
                             Text(
                               "Selecione a data da sua reserva",
                               textAlign: TextAlign.center,
@@ -160,6 +161,7 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
+                                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 110),
                               ),
                               onPressed: () => _selectDate(context),
                               child: Text(
@@ -172,32 +174,36 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                           ],
                         ),
                         SizedBox(height: 16.0),
-                        Column(
-                          children: [
-                            Text(
-                              "Selecione a hora sua reserva",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 22, color: Colors.black),
-                            ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                foregroundColor: Colors.white,
-                                backgroundColor: Colors.amber,
-                                side: BorderSide(color: Colors.black, width: 2),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            children: [
+                              Text(
+                                "Selecione a hora sua reserva",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 22, color: Colors.black),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  foregroundColor: Colors.white,
+                                  backgroundColor: Colors.amber,
+                                  side: BorderSide(color: Colors.black, width: 2),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 110),
+                                ),
+                                onPressed: () => _selectTime(context),
+                                child: Text(
+                                  _selectedTime == null
+                                      ? 'Selecionar Hora'
+                                      : 'Hora: ${_selectedTime!.format(context)}',
                                 ),
                               ),
-                              onPressed: () => _selectTime(context),
-                              child: Text(
-                                _selectedTime == null
-                                    ? 'Selecionar Hora'
-                                    : 'Hora: ${_selectedTime!.format(context)}',
-                              ),
-                            ),
 
-                          ],
+                            ],
+                          ),
                         ),
                         SizedBox(height: 250.0),
                       ],

@@ -12,7 +12,7 @@ class NavBarRoots extends StatefulWidget {
 class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
-    HomeScreen(fromLogin: true,),
+    HomeScreen(),
     ScheduleScreen(),
     SettingScreen(),
   ];

@@ -4,20 +4,16 @@ import 'package:healthcare/models/all_restaurants.dart';
 import 'package:healthcare/screens/appointment_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  final bool fromLogin;
-
-  const HomeScreen({super.key, required this.fromLogin});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
-
 class _HomeScreenState extends State<HomeScreen> {
   // Navegar para a tela do restaurante
   void navigateToRestaurantDetails(int index) {
     final allrestaurants = context.read<AllRestaurants>();
     final restaurantsData = allrestaurants.restaurantsData;
-
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -27,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
   List foods = [
     "Sushi",
     "Massas",
@@ -36,12 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
     "Hambúrguer",
     "Vegetariano",
   ];
-
   @override
   Widget build(BuildContext context) {
     final allrestaurants = context.read<AllRestaurants>();
     final restaurantsData = allrestaurants.restaurantsData;
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -56,27 +49,13 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (widget.fromLogin) const Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Olá, User",
-                          style: TextStyle(
-                            fontSize: 35,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        CircleAvatar(
-                          radius: 25,
-                          backgroundImage: AssetImage("images/avatar.png"),
-                          backgroundColor: Color.fromARGB(255, 250, 211, 120),
-                        ),
-                      ],
                     ),
                   ),
-                  if (widget.fromLogin) const SizedBox(height: 25),
+                  const SizedBox(height: 15),
                   const Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
