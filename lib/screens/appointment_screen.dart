@@ -14,8 +14,18 @@ class AppointmentScreen extends StatefulWidget {
   State<AppointmentScreen> createState() => _AppointmentScreenState();
 }
 
-
 class _AppointmentScreenState extends State<AppointmentScreen> {
+
+  void navigateToMakeReservation() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MakeReservationScreen(
+          restaurant: widget.restaurant,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,15 +140,10 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                  widget.restaurant.description,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                  textAlign: TextAlign.justify,
+                    widget.restaurant.description,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.justify,
                   ),
-                  // SizedBox(height: 5),
-                  // Text(
-                  //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                  //   style: TextStyle(fontSize: 16, color: Colors.black54),
-                  // ),
                   SizedBox(height: 10),
                   Row(
                     children: [
@@ -247,7 +252,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       },
                     ),
                   ),
-
                   SizedBox(height: 10),
                   Text(
                     "Localização",
@@ -277,7 +281,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     ),
                     subtitle: Text("Brasília-DF"),
                   ),
-                  SizedBox(height: 150), 
+                  SizedBox(height: 150),
                 ],
               ),
             ),
@@ -311,15 +315,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
             ),
             SizedBox(height: 15),
             InkWell(
-              onTap: () {
-                // Navegação para a tela make a reservation
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MakeReservationScreen(),
-                  ),
-                );
-              },
+              onTap: navigateToMakeReservation,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(vertical: 18),

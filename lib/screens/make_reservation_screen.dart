@@ -4,13 +4,13 @@ import 'package:healthcare/models/restaurants.dart';
 
 
 class MakeReservationScreen extends StatefulWidget {
-  // final Restaurant restaurant;
-  //
-  // const MakeReservationScreen({super.key, required this.restaurant});
+  final Restaurant restaurant;
+
+  const MakeReservationScreen({super.key, required this.restaurant});
 
 
   @override
-  _MakeReservationScreenState createState() => _MakeReservationScreenState();
+  State<MakeReservationScreen> createState() => _MakeReservationScreenState();
 }
 
 class _MakeReservationScreenState extends State<MakeReservationScreen> {
@@ -116,11 +116,11 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                   CircleAvatar(
                     minRadius: 50,
                     maxRadius: 50,
-                    backgroundImage: AssetImage("images/avatar.png"),
+                    backgroundImage: AssetImage("images/${widget.restaurant.imagePath}"),
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "Nome do restaurante",
+                    widget.restaurant.name,
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.w500,
