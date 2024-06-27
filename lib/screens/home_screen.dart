@@ -4,7 +4,9 @@ import 'package:healthcare/models/all_restaurants.dart';
 import 'package:healthcare/screens/appointment_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final bool fromLogin;
+
+  const HomeScreen({super.key, required this.fromLogin});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -54,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Padding(
+                  if (widget.fromLogin) const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 25),
+                  if (widget.fromLogin) const SizedBox(height: 25),
                   const Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(

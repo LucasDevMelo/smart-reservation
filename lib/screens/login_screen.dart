@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:healthcare/screens/sign_up_screen.dart';
 import 'package:healthcare/widgets/navbar_roots.dart';
 
+import 'home_screen.dart';
+
 class loginScreen extends StatefulWidget {
   @override
   State<loginScreen> createState() => _loginScreenState();
@@ -68,10 +70,12 @@ class _loginScreenState extends State<loginScreen> {
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => NavBarRoots(),
-                            ));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(fromLogin: true),
+                          ),
+                        );
+
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 15),

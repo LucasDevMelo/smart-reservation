@@ -23,10 +23,11 @@ class WelcomeScreen extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => NavBarRoots(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(fromLogin: false),
+                        ),
+                      );
                     },
                     child: Text(
                       "Pular",
