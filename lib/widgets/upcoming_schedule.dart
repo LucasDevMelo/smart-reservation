@@ -36,7 +36,7 @@ class UpcomingSchedule extends StatelessWidget {
                     subtitle: Text("Frutos do mar"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("cocobambulogo.jpg"),
+                      backgroundImage: AssetImage("images/cocobambulogo.jpg"),
                     ),
                   ),
                   Padding(
@@ -326,7 +326,7 @@ class UpcomingSchedule extends StatelessWidget {
                     subtitle: Text("Frutos do mar"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/nau.png"),
+                      backgroundImage: AssetImage("images/naulogo.png"),
                     ),
                   ),
                   Padding(

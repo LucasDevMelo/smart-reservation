@@ -23,23 +23,53 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
       initialDate: DateTime.now(),
       firstDate: DateTime.now(),
       lastDate: DateTime(2101),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            colorScheme: ColorScheme.light(
+              primary: Colors.orangeAccent,
+              onPrimary: Colors.white,
+              onSurface: Colors.black,
+            ),
+            dialogBackgroundColor: Colors.white,
+          ),
+          child: child!,
+        );
+      },
     );
-    if (picked != null && picked != _selectedDate)
+    if (picked != null && picked != _selectedDate) {
       setState(() {
         _selectedDate = picked;
       });
+    }
   }
+
 
   Future<void> _selectTime(BuildContext context) async {
     final TimeOfDay? picked = await showTimePicker(
       context: context,
       initialTime: TimeOfDay.now(),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            colorScheme: ColorScheme.light(
+              primary: Colors.orangeAccent,
+              onPrimary: Colors.white,
+              onSurface: Colors.black,
+            ),
+            dialogBackgroundColor: Colors.white,
+          ),
+          child: child!,
+        );
+      },
     );
-    if (picked != null && picked != _selectedTime)
+    if (picked != null && picked != _selectedTime) {
       setState(() {
         _selectedTime = picked;
       });
+    }
   }
+
 
   void _confirmReservation(BuildContext context) {
     if (_selectedDate != null && _selectedTime != null) {
@@ -70,7 +100,7 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Faça uma reserva"),
+        title: Text("Faça uma reserva",),
         backgroundColor: Color(0xFFFFB300),
       ),
       backgroundColor: Color(0xFFFFB300),
@@ -123,11 +153,22 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                                   fontSize: 22, color: Colors.black),
                             ),
                             ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.amber,
+                                side: BorderSide(color: Colors.black, width: 2),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
                               onPressed: () => _selectDate(context),
-                              child: Text(_selectedDate == null
-                                  ? 'Selecionar Data'
-                                  : 'Data: ${_selectedDate!.day}/${_selectedDate!.month}/${_selectedDate!.year}'),
+                              child: Text(
+                                _selectedDate == null
+                                    ? 'Selecionar Data'
+                                    : 'Data: ${_selectedDate!.day}/${_selectedDate!.month}/${_selectedDate!.year}',
+                              ),
                             ),
+
                           ],
                         ),
                         SizedBox(height: 16.0),
@@ -140,11 +181,22 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                                   fontSize: 22, color: Colors.black),
                             ),
                             ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.amber,
+                                side: BorderSide(color: Colors.black, width: 2),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
                               onPressed: () => _selectTime(context),
-                              child: Text(_selectedTime == null
-                                  ? 'Selecionar Hora'
-                                  : 'Hora: ${_selectedTime!.format(context)}'),
+                              child: Text(
+                                _selectedTime == null
+                                    ? 'Selecionar Hora'
+                                    : 'Hora: ${_selectedTime!.format(context)}',
+                              ),
                             ),
+
                           ],
                         ),
                         SizedBox(height: 230.0),
