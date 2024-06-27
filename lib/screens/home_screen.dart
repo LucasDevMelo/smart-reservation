@@ -245,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   const SizedBox(height: 10),
                                   Container(
                                     constraints: BoxConstraints(
-                                      maxWidth: MediaQuery.of(context).size.width - 190,
+                                      maxWidth: MediaQuery.of(context).size.width - 210,
                                     ),
                                     child: Text(
                                       restaurantsData[reverseIndex].location,
