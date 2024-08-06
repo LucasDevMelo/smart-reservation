@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:healthcare/models/map.dart';
 import 'package:healthcare/models/restaurants.dart';
 
 class MapDetails extends StatelessWidget {
@@ -11,7 +10,7 @@ class MapDetails extends StatelessWidget {
     final map = restaurant.maps.first;
 
     return Container(
-      child: Wrap(
+      child: Column(
         children: [
           Image.network(map.foto,
               height: 250,
@@ -22,8 +21,9 @@ class MapDetails extends StatelessWidget {
             child: Text(
               restaurant.name,
               style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w600,
+                fontSize: 23,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
               ),
             ),
           ),
