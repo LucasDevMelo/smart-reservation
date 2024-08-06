@@ -10,8 +10,8 @@ import 'package:healthcare/models/restaurants.dart';
 
 class MapController extends ChangeNotifier {
 
-  double lat = -15.817095729450202;
-  double long = -47.83720959090759;
+  double lat = -15.790454601933027;
+  double long = -47.891011664793766;
   String erro = '';
   Set<Marker> markers = Set<Marker>();
   late GoogleMapController _mapsController;

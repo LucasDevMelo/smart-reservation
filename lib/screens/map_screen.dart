@@ -24,7 +24,7 @@ class MapScreen extends StatelessWidget {
           return GoogleMap(
             initialCameraPosition: CameraPosition(
               target: LatLng(local.lat, local.long),
-              zoom: 18,
+              zoom: 15,
             ),
             zoomControlsEnabled: true,
             mapType: MapType.normal,
