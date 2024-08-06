@@ -51,6 +51,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.786218107019996,
+          longitude:  -47.88948075362093,
+        ),
+      ]
     ),
 
     //Mangai
@@ -98,6 +106,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.817681797837153,
+          longitude: -47.83694724426981,
+        ),
+      ]
     ),
 
     //Nau
@@ -145,6 +161,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.817095729450202,
+          longitude: -47.83720959090759,
+        ),
+      ]
     ),
 
     //Villa Tevere
@@ -192,6 +216,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.83113007060111,
+          longitude:  -47.92364506457157,
+        ),
+      ]
     ),
 
     //Toro Parrilla
@@ -239,6 +271,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.806653826806913,
+          longitude: -47.89370174076201,
+        ),
+      ]
     ),
 
     //Feitiço das Artes
@@ -286,6 +326,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.768687595599152,
+          longitude:  -47.886815393155686,
+        ),
+      ]
     ),
 
     //Taypá
@@ -333,54 +381,70 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.860582699933948,
+          longitude: -47.872319030373326,
+        ),
+      ]
     ),
 
     //Vasto
     Restaurant(
-    name: "Vasto",
-    imagePath: "vastologo.jpg",
-    rating: "4.8",
-    category: "Comida brasileira",
-    description: "A arquitetura, inspirada em restaurantes tradicionais nova-iorquinos, traz um ambiente com atmosfera aconchegante.",
-    location: "Brasilia shopping",
-    coments: [
-      Comment(
-        title: "Incrível experiência",
-        userImage: "images/avatar.png",
-        rating: "4.9",
-        datetime: "25/06/2024",
-        comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
-      ),
-      Comment(
-        title: "Ambiente sofisticado",
-        userImage: "",
-        rating: "4.7",
-        datetime: "24/06/2024",
-        comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
-      ),
-      Comment(
-        title: "Comida fantástica",
-        userImage: "images/avatar.png",
-        rating: "4.8",
-        datetime: "23/06/2024",
-        comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
-      ),
-      Comment(
-        title: "Ótimo serviço",
-        userImage: "images/avatar.png",
-        rating: "4.9",
-        datetime: "22/06/2024",
-        comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
-      ),
-      Comment(
-        title: "Vale a pena a visita",
-        userImage: "images/avatar.png",
-        rating: "4.8",
-        datetime: "21/06/2024",
-        comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
-      ),
-    ],
-  ),
+      name: "Vasto",
+      imagePath: "vastologo.jpg",
+      rating: "4.8",
+      category: "Comida brasileira",
+      description: "A arquitetura, inspirada em restaurantes tradicionais nova-iorquinos, traz um ambiente com atmosfera aconchegante.",
+      location: "Brasilia shopping",
+      coments: [
+        Comment(
+          title: "Incrível experiência",
+          userImage: "images/avatar.png",
+          rating: "4.9",
+          datetime: "25/06/2024",
+          comment: "A comida é excepcional e o ambiente é muito acolhedor. Voltarei com certeza!",
+        ),
+        Comment(
+          title: "Ambiente sofisticado",
+          userImage: "",
+          rating: "4.7",
+          datetime: "24/06/2024",
+          comment: "A atmosfera do restaurante é muito agradável e a comida estava deliciosa.",
+        ),
+        Comment(
+          title: "Comida fantástica",
+          userImage: "images/avatar.png",
+          rating: "4.8",
+          datetime: "23/06/2024",
+          comment: "Os pratos são muito bem elaborados e o atendimento foi excelente.",
+        ),
+        Comment(
+          title: "Ótimo serviço",
+          userImage: "images/avatar.png",
+          rating: "4.9",
+          datetime: "22/06/2024",
+          comment: "O serviço foi impecável e a comida estava maravilhosa. Recomendo!",
+        ),
+        Comment(
+          title: "Vale a pena a visita",
+          userImage: "images/avatar.png",
+          rating: "4.8",
+          datetime: "21/06/2024",
+          comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
+        ),
+      ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.78688253089391,
+          longitude: -47.88883493476732,
+        ),
+      ]
+    ),
 
 
   //Universal
@@ -428,6 +492,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.823406041813675,
+          longitude: -47.905034026403456,
+        ),
+      ]
     ),
 
     //Saveur Bistrot
@@ -475,6 +547,14 @@ class AllRestaurants extends ChangeNotifier{
           comment: "Ótimo lugar para ir com amigos e família. A comida é divina e o ambiente muito agradável.",
         ),
       ],
+      maps: [
+        Map(
+          foto:
+          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          latitude: -15.866098307345672,
+          longitude: -47.857125286657904,
+        ),
+      ]
     ),
   ];
 

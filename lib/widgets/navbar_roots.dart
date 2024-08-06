@@ -4,6 +4,8 @@ import 'package:healthcare/screens/home_screen.dart';
 import 'package:healthcare/screens/schedule_screen.dart';
 import 'package:healthcare/screens/settings_screen.dart';
 
+import '../screens/map_screen.dart';
+
 class NavBarRoots extends StatefulWidget {
   @override
   State<NavBarRoots> createState() => _NavBarRootsState();
@@ -13,6 +15,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     HomeScreen(),
+    MapScreen(),
     ScheduleScreen(),
     SettingScreen(),
   ];
@@ -42,6 +45,8 @@ class _NavBarRootsState extends State<NavBarRoots> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Início"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.gps_fixed), label: "Mapa"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month_outlined), label: "Reservas"),
             BottomNavigationBarItem(
