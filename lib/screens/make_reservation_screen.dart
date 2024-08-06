@@ -225,7 +225,7 @@ class _MakeReservationScreenState extends State<MakeReservationScreen> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 250.0),
+                        SizedBox(height: 370.0),
                       ],
                     ),
                   ),

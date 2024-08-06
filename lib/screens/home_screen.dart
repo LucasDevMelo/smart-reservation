@@ -72,7 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     ),
                   ),
-                  const SizedBox(height: 15),
                   const Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
@@ -245,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   const SizedBox(height: 10),
                                   Container(
                                     constraints: BoxConstraints(
-                                      maxWidth: MediaQuery.of(context).size.width - 190,
+                                      maxWidth: MediaQuery.of(context).size.width - 210,
                                     ),
                                     child: Text(
                                       restaurantsData[reverseIndex].location,
