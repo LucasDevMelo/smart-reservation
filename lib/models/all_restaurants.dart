@@ -53,8 +53,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto: 'images/COCOBAMBUBSbanner.png',
           latitude: -15.786218107019996,
           longitude:  -47.88948075362093,
         ),
@@ -108,8 +107,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto:'images/MANGAIbanner.png',
           latitude: -15.817681797837153,
           longitude: -47.83694724426981,
         ),
@@ -164,7 +162,7 @@ class AllRestaurants extends ChangeNotifier{
       maps: [
         Map(
           foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          'images/NAUbanner.png',
           latitude: -15.817095729450202,
           longitude: -47.83720959090759,
         ),
@@ -438,8 +436,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto: 'images/VASTOBSbanner.png',
           latitude: -15.78688253089391,
           longitude: -47.88883493476732,
         ),
