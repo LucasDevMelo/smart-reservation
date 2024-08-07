@@ -216,8 +216,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto: "images/VILLA TEVERE.png",
           latitude: -15.83113007060111,
           longitude:  -47.92364506457157,
         ),
@@ -271,8 +270,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto:"images/TOROPARRILLAbanner.png",
           latitude: -15.806653826806913,
           longitude: -47.89370174076201,
         ),
@@ -326,8 +324,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto: "images/FEITICODASARTESbanner.png",
           latitude: -15.768687595599152,
           longitude:  -47.886815393155686,
         ),
@@ -381,8 +378,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto:"images/TAYPAbanner.png",
           latitude: -15.860582699933948,
           longitude: -47.872319030373326,
         ),
@@ -491,8 +487,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto:"images/UNIVERSALbanner.png",
           latitude: -15.823406041813675,
           longitude: -47.905034026403456,
         ),
@@ -546,8 +541,7 @@ class AllRestaurants extends ChangeNotifier{
       ],
       maps: [
         Map(
-          foto:
-          'https://lh5.googleusercontent.com/p/AF1QipP_xnSi5-sp9slSuMpSx-JlmvwvHGL1VJ_JcOGX=w408-h306-k-no',
+          foto:"images/SAVEURBISTROTbanner.png",
           latitude: -15.866098307345672,
           longitude: -47.857125286657904,
         ),
