@@ -41,7 +41,7 @@ class MapController extends ChangeNotifier {
           position: LatLng(location.latitude, location.longitude),
           icon: await BitmapDescriptor.fromAssetImage(
             ImageConfiguration(),
-            'images/dishes.png',
+            'images/pinmap.png',
           ),
           onTap: () => {
             showModalBottomSheet(
