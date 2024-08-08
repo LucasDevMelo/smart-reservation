@@ -57,6 +57,13 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.786218107019996,
           longitude:  -47.88948075362093,
         ),
+      ],
+      carouselRestaurant: [
+        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
       ]
     ),
 
@@ -111,7 +118,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.817681797837153,
           longitude: -47.83694724426981,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Nau
@@ -166,7 +180,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.817095729450202,
           longitude: -47.83720959090759,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Villa Tevere
@@ -220,7 +241,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.83113007060111,
           longitude:  -47.92364506457157,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Toro Parrilla
@@ -274,7 +302,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.806653826806913,
           longitude: -47.89370174076201,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Feitiço das Artes
@@ -328,7 +363,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.768687595599152,
           longitude:  -47.886815393155686,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Taypá
@@ -382,7 +424,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.860582699933948,
           longitude: -47.872319030373326,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Vasto
@@ -436,7 +485,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.78688253089391,
           longitude: -47.88883493476732,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
 
@@ -491,7 +547,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.823406041813675,
           longitude: -47.905034026403456,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
 
     //Saveur Bistrot
@@ -545,7 +608,14 @@ class AllRestaurants extends ChangeNotifier{
           latitude: -15.866098307345672,
           longitude: -47.857125286657904,
         ),
-      ]
+      ],
+        carouselRestaurant: [
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+          CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        ]
     ),
   ];
 

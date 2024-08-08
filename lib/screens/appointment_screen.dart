@@ -15,7 +15,6 @@ class AppointmentScreen extends StatefulWidget {
 }
 
 class _AppointmentScreenState extends State<AppointmentScreen> {
-
   void navigateToMakeReservation() {
     Navigator.push(
       context,
@@ -29,6 +28,30 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final imagesRestaurant = widget.restaurant.carouselRestaurant.first;
+
+    final images = List.generate(
+      10,
+      (index) => Hero(
+        tag: 'image-$index',
+        child: Image.asset(
+          imagesRestaurant.carouselImage,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+
+    final imagesFull = List.generate(
+      10,
+      (index) => Hero(
+        tag: 'image-$index',
+        child: Image.asset(
+          imagesRestaurant.carouselImage,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+
     return Scaffold(
       backgroundColor: Color(0xFFFFB300),
       body: SingleChildScrollView(
@@ -67,7 +90,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                         CircleAvatar(
                           minRadius: 50,
                           maxRadius: 50,
-                          backgroundImage: AssetImage("images/${widget.restaurant.imagePath}",),
+                          backgroundImage: AssetImage(
+                            "images/${widget.restaurant.imagePath}",
+                          ),
                         ),
                         SizedBox(height: 5),
                         Text(
@@ -145,6 +170,32 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     textAlign: TextAlign.justify,
                   ),
                   SizedBox(height: 10),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxHeight: 200,
+                      maxWidth: MediaQuery.sizeOf(context).width - 10,
+                    ),
+                    child: CarouselView(
+                      onTap: (index) => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Scaffold(
+                            backgroundColor: Colors.black,
+                            extendBody: true,
+                            body: GestureDetector(
+                              onTap: () => Navigator.of(context).pop(),
+                              child: Center(
+                                child: imagesFull[index], // Centraliza a imagem
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      itemExtent: 300,
+                      children: images,
+                      itemSnapping: true,
+                    ),
+                  ),
+                  SizedBox(height: 10),
                   Row(
                     children: [
                       Text(
@@ -207,8 +258,10 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               ListTile(
                                 leading: CircleAvatar(
                                   radius: 25,
-                                  backgroundImage: AssetImage(comment.userImage),
-                                  backgroundColor: Color.fromARGB(255, 250, 211, 120),
+                                  backgroundImage:
+                                      AssetImage(comment.userImage),
+                                  backgroundColor:
+                                      Color.fromARGB(255, 250, 211, 120),
                                 ),
                                 title: Text(
                                   comment.title,
@@ -236,7 +289,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               ),
                               SizedBox(height: 5),
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: Text(
                                   comment.comment,
                                   maxLines: 2,
