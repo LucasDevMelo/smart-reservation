@@ -59,11 +59,11 @@ class AllRestaurants extends ChangeNotifier{
         ),
       ],
       carouselRestaurant: [
-        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
-        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
-        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
-        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
-        CarouselRestaurant(carouselImage: "images/COCOBAMBUBSbanner.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBU1.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBU2.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBU3.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBU4.png"),
+        CarouselRestaurant(carouselImage: "images/COCOBAMBU5.png"),
       ]
     ),
 

@@ -28,29 +28,29 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final imagesRestaurant = widget.restaurant.carouselRestaurant.first;
+    final imagesRestaurant = widget.restaurant.carouselRestaurant;
 
-    final images = List.generate(
-      10,
-      (index) => Hero(
-        tag: 'image-$index',
+    // Gerando widgets de imagem para o carrossel
+    final images = imagesRestaurant.map((image) {
+      return Hero(
+        tag: 'image-$image', // Use um identificador único
         child: Image.asset(
-          imagesRestaurant.carouselImage,
+          image.carouselImage,
           fit: BoxFit.cover,
         ),
-      ),
-    );
+      );
+    }).toList();
 
-    final imagesFull = List.generate(
-      10,
-      (index) => Hero(
-        tag: 'image-$index',
+    // Gerando widgets de imagem para visualização em tela cheia
+    final imagesFull = imagesRestaurant.map((image) {
+      return Hero(
+        tag: 'image-$image', // Use um identificador único
         child: Image.asset(
-          imagesRestaurant.carouselImage,
+          image.carouselImage,
           fit: BoxFit.cover,
         ),
-      ),
-    );
+      );
+    }).toList();
 
     return Scaffold(
       backgroundColor: Color(0xFFFFB300),
