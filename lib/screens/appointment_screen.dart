@@ -170,6 +170,28 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     textAlign: TextAlign.justify,
                   ),
                   SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Text(
+                        "Imagens",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(width: 10),
+                      Spacer(),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Ver todas",
+                          style: TextStyle(
+                            color: Color(0xFFFFB300),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   ConstrainedBox(
                     constraints: BoxConstraints(
                       maxHeight: 200,
