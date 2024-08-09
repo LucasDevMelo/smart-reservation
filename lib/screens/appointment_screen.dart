@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:healthcare/screens/all_comments_screen.dart';
 import 'package:healthcare/screens/make_reservation_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
@@ -26,14 +27,91 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
     );
   }
 
+  void navigateToAllComments() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AllCommentsScreen(
+          restaurant: widget.restaurant,
+        ),
+      ),
+    );
+  }
+
+  void showCommentDetails(BuildContext context, Comment comment) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          title: Text(comment.title),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 25,
+                    backgroundImage: AssetImage(comment.userImage),
+                    backgroundColor: Color.fromARGB(255, 250, 211, 120),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    comment.datetime,
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Text(
+                comment.comment,
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  SizedBox(width: 5),
+                  Text(
+                    comment.rating,
+                    style: TextStyle(color: Colors.black54),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                "Fechar",
+                style: TextStyle(
+                  color: Colors.amber
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final imagesRestaurant = widget.restaurant.carouselRestaurant;
 
-    // Gerando widgets de imagem para o carrossel
     final images = imagesRestaurant.map((image) {
       return Hero(
-        tag: 'image-$image', // Use um identificador único
+        tag: 'image-$image',
         child: Image.asset(
           image.carouselImage,
           fit: BoxFit.cover,
@@ -41,10 +119,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
       );
     }).toList();
 
-    // Gerando widgets de imagem para visualização em tela cheia
     final imagesFull = imagesRestaurant.map((image) {
       return Hero(
-        tag: 'image-$image', // Use um identificador único
+        tag: 'image-$image',
         child: Image.asset(
           image.carouselImage,
           fit: BoxFit.cover,
@@ -206,7 +283,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                             body: GestureDetector(
                               onTap: () => Navigator.of(context).pop(),
                               child: Center(
-                                child: imagesFull[index], // Centraliza a imagem
+                                child: imagesFull[index],
                               ),
                             ),
                           ),
@@ -241,7 +318,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       ),
                       Spacer(),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: navigateToAllComments,
                         child: Text(
                           "Ver todas",
                           style: TextStyle(
@@ -260,69 +337,70 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       itemCount: widget.restaurant.coments.length,
                       itemBuilder: (context, index) {
                         var comment = widget.restaurant.coments[index];
-                        return Container(
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.symmetric(vertical: 5),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 4,
-                                spreadRadius: 2,
-                              ),
-                            ],
-                          ),
-                          width: MediaQuery.of(context).size.width / 1.4,
-                          child: Column(
-                            children: [
-                              ListTile(
-                                leading: CircleAvatar(
-                                  radius: 25,
-                                  backgroundImage:
-                                      AssetImage(comment.userImage),
-                                  backgroundColor:
-                                      Color.fromARGB(255, 250, 211, 120),
+                        return GestureDetector(
+                          onTap: () => showCommentDetails(context, comment),
+                          child: Container(
+                            margin: EdgeInsets.all(10),
+                            padding: EdgeInsets.symmetric(vertical: 5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 4,
+                                  spreadRadius: 2,
                                 ),
-                                title: Text(
-                                  comment.title,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
+                              ],
+                            ),
+                            width: MediaQuery.of(context).size.width / 1.4,
+                            child: Column(
+                              children: [
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    radius: 25,
+                                    backgroundImage:
+                                    AssetImage(comment.userImage),
+                                    backgroundColor: Color.fromARGB(255, 250, 211, 120),
                                   ),
-                                ),
-                                subtitle: Text(comment.datetime),
-                                trailing: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.amber,
+                                  title: Text(
+                                    comment.title,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      comment.rating,
-                                      style: TextStyle(
-                                        color: Colors.black54,
+                                  ),
+                                  subtitle: Text(comment.datetime),
+                                  trailing: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  comment.comment,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.black,
+                                      Text(
+                                        comment.rating,
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox(height: 5),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                                  child: Text(
+                                    comment.comment,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },
